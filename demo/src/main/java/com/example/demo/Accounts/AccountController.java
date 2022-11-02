@@ -21,4 +21,11 @@ public class AccountController {
 
         return accountService.registerAccount(request);
     }
+
+    @PostMapping(path="/login")
+    public ResponseEntity<?> login(@RequestBody LoginRequest request) {
+
+        System.out.println("Login hit");
+        return accountService.login(request);
+    }
 }

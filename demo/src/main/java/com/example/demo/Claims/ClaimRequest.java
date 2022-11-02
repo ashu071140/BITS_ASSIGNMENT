@@ -13,5 +13,4 @@ public class ClaimRequest {
 
     private long vin;
     private long insuranceNo;
-    private boolean json;
 }

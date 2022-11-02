@@ -13,7 +13,6 @@ public class ClaimController {
 
     @Autowired
     private ClaimService claimService;
-
     @PostMapping(value = "/make")
     public ResponseEntity<?> makeClaim(@RequestBody ClaimRequest request) {
         return claimService.findByVin(request);

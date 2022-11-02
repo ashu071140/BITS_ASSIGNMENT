@@ -9,7 +9,6 @@ import java.util.Optional;
 public interface ClaimRepository extends JpaRepository<Claim, Long> {
 
     Optional<Claim> findByVINAndInsuranceNo(long VIN, long insuranceNo);
-
     Optional<Claim> findByInsuranceNo(long insuranceNo);
 
 }

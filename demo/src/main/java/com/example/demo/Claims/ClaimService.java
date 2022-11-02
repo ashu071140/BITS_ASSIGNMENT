@@ -18,17 +18,9 @@ public class ClaimService {
         Optional<Claim> claim = claimRepository
                 .findByVINAndInsuranceNo(claimRequest.getVin(), claimRequest.getInsuranceNo());
 
-        if (claim.isPresent()) {
-            if (!claimRequest.isJson()) {
-                return ResponseEntity.ok("You are entitled to £" + claim.get().
-                        getClaimAmount() + " in compensation");
-            }
+        if (claim.isPresent()) return ResponseEntity.ok(claim.get());
 
-            return ResponseEntity.ok(claim.get());
-        }
-
-        if (claim.isEmpty()) return ResponseEntity.status(HttpStatus.NOT_FOUND).
-                body("Claim not found. Please check that your information is correct");
+        if (claim.isEmpty()) return ResponseEntity.ok(new Claim());
 
         return ResponseEntity.ok("Unknown Error");
     }
