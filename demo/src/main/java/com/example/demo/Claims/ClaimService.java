@@ -28,20 +28,22 @@ public class ClaimService {
     public void generateClaims() {
 
         Claim claim = new Claim(
-                12345L,
+                "12345",
                 54321L,
-                "John",
-                "Doe",
-                23990
+                23990,
+                "Ford",
+                "Focus",
+                2017
         );
         claimRepository.save(claim);
 
         Claim claim2 = new Claim(
-                00000L,
+                "00000",
                 99999L,
-                "Farooq",
-                "Al-Saadi",
-                10500.34
+                10500,
+                "Mercedes",
+                "E-Class",
+                2019
         );
 
         claimRepository.save(claim2);

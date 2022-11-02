@@ -25,30 +25,20 @@ public class Claim {
                 generator = "claim_sequence"
         )
         private long claimId;
-        private long VIN;
+        private String VIN;
         private long insuranceNo;
-        private String firstName;
-        private String lastName;
         private double claimAmount;
+        private String make;
+        private String model;
+        private long year;
 
-
-        public Claim(Long VIN, Long insuranceNo, String firstName, String lastName, double claimAmount) {
+        public Claim(String VIN, long insuranceNo, double claimAmount, String make, String model, long year) {
                 this.VIN = VIN;
                 this.insuranceNo = insuranceNo;
-                this.firstName = firstName;
-                this.lastName = lastName;
                 this.claimAmount = claimAmount;
+                this.make = make;
+                this.model = model;
+                this.year = year;
         }
 
-        @Override
-        public String toString() {
-                return "Claim{" +
-                        "claimId=" + claimId +
-                        ", VIN=" + VIN +
-                        ", insuranceNo=" + insuranceNo +
-                        ", firstName='" + firstName + '\'' +
-                        ", lastName='" + lastName + '\'' +
-                        ", claimAmount=" + claimAmount +
-                        '}';
-        }
 }

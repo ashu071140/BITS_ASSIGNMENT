@@ -11,6 +11,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ClaimRequest {
 
-    private long vin;
+    private String vin;
     private long insuranceNo;
 }
