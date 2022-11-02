@@ -22,7 +22,7 @@ public class ClaimService {
 
         if (claim.isEmpty()) return ResponseEntity.ok(new Claim());
 
-        return ResponseEntity.ok("Unknown Error");
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body("unknown error");
     }
 
     public void generateClaims() {

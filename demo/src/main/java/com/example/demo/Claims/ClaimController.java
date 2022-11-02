@@ -24,4 +24,22 @@ public class ClaimController {
         return ResponseEntity.ok("Claims have been generated");
 
     }
+
+
+    // Request a Quote - Reg,
+    // Issue a Quote
+    // Insurance Registrations -- VIN Model Make YOM
+    // Register Claims
+    // Claims Status
+    // Monthly Reports on claims
+
+
+
+
+
+
+
+
+
+
 }
